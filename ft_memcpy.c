@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperin <aperin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 13:21:44 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/03 15:28:14 by aperin           ###   ########.fr       */
+/*   Created: 2022/10/03 14:44:46 by aperin            #+#    #+#             */
+/*   Updated: 2022/10/03 15:47:11 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	char		*ptr_dest;
+	const char	*ptr_src;
+
+	if (!dest || !src)
+		return (0);
+	while (n)
+	{
+		ptr_dest[n - 1] = ptr_src[n - 1];
+		n--;
+	}
+	return (dest);
 }
