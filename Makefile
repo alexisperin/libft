@@ -10,11 +10,10 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= isalpha isdigit isalnum isascii isprint strlen memset bzero memcpy \
-			memmove strlcpy strlcat toupper tolower strchr strrchr strncmp \
-			memchr memcmp strnstr atoi
-SRCS	= $(addprefix ft_, $(SRCS))
-SRCS	= $(addsufix .c, $(SRCS))
+FILES	= isalpha.c isdigit.c isalnum.c isascii.c isprint.c strlen.c memset.c \
+	bzero.c memcpy.c memmove.c strlcpy.c strlcat.c toupper.c tolower.c \
+	strchr.c strrchr.c strncmp.c memchr.c memcmp.c strnstr.c atoi.c
+SRCS	= $(addprefix ft_, $(FILES))
 OBJS	= $(SRCS:.c=.o)
 NAME	= libft.a
 
