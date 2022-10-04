@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 15:31:29 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/03 15:50:40 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/04 13:51:37 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = 0;
-	return (i);
+	return (ft_strlen(src));
 }

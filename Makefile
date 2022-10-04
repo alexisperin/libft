@@ -6,13 +6,14 @@
 #    By: aperin <aperin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 13:00:13 by aperin            #+#    #+#              #
-#    Updated: 2022/10/03 14:53:05 by aperin           ###   ########.fr        #
+#    Updated: 2022/10/04 16:17:13 by aperin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILES	= isalpha.c isdigit.c isalnum.c isascii.c isprint.c strlen.c memset.c \
 	bzero.c memcpy.c memmove.c strlcpy.c strlcat.c toupper.c tolower.c \
-	strchr.c strrchr.c strncmp.c memchr.c memcmp.c strnstr.c atoi.c
+	strchr.c strrchr.c strncmp.c memchr.c memcmp.c strnstr.c atoi.c calloc.c \
+	strdup.c substr.c
 SRCS	= $(addprefix ft_, $(FILES))
 OBJS	= $(SRCS:.c=.o)
 NAME	= libft.a
@@ -21,7 +22,7 @@ NAME	= libft.a
 	gcc -Wall -Wextra -Werror -c -I./includes $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-			ar -rc $(OBJS) $(NAME)
+			ar -rcs $(NAME) $(OBJS)
 
 all:	${NAME}
 

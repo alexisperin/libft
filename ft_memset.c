@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:45:00 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/03 14:14:53 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/04 12:35:20 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int	*ptr;
+	unsigned char	*ptr;
 
-	ptr = (int *) s;
+	ptr = (unsigned char *) s;
 	if (!s)
 		return (0);
+	ptr[n] = 0;
 	while (n)
 	{
-		ptr[n - 1] = c;
+		ptr[n - 1] = (unsigned char) c;
 		n--;
 	}
-	return (s);
+	return (ptr);
 }
