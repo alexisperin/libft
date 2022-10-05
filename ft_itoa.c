@@ -6,13 +6,13 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:30:08 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 15:47:06 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/05 18:18:55 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_itoa_len(long nbr)
+static int	ft_itoa_len(long nbr)
 {
 	int	len;
 
@@ -30,7 +30,7 @@ int	ft_itoa_len(long nbr)
 	return (len);
 }
 
-void	ft_itoa_recursive(long nbr, char *str, int index)
+static void	ft_itoa_recursive(long nbr, char *str, int index)
 {
 	if (nbr > 9)
 		ft_itoa_recursive(nbr / 10, str, index - 1);

@@ -6,13 +6,13 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:16:55 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 14:55:20 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/05 18:15:15 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	in_set(char c, char const *set)
+static int	in_set(char c, char const *set)
 {
 	int	i;
 

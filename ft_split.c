@@ -6,13 +6,13 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:12:31 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/04 19:12:31 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/05 18:17:20 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	size_splits(const char *str, char c)
+static int	size_splits(const char *str, char c)
 {
 	int	i;
 	int	size;
@@ -33,7 +33,7 @@ int	size_splits(const char *str, char c)
 	return (size);
 }
 
-char	*get_substring(const char *str, char c)
+static char	*get_substring(const char *str, char c)
 {
 	int		len;
 	char	*substr;
@@ -48,7 +48,7 @@ char	*get_substring(const char *str, char c)
 	return (substr);
 }
 
-char	**free_splits(char **splits, int i)
+static char	**free_splits(char **splits, int i)
 {
 	while (--i >= 0)
 		free(splits[i]);

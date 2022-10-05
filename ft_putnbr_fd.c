@@ -6,13 +6,13 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:15:52 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 15:20:24 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/05 18:17:49 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_recursive(long nbr, int fd)
+static void	ft_putnbr_recursive(long nbr, int fd)
 {
 	if (nbr > 9)
 		ft_putnbr_recursive(nbr / 10, fd);
