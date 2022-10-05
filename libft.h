@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:08:13 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 15:59:39 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/05 16:14:22 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ typedef struct	s_list
 }					t_list;
 
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
