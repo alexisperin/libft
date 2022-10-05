@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:30:08 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 18:18:55 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/05 20:50:02 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*ft_itoa(int n)
 	if (nbr < 0)
 	{
 		str[i] = '-';
-		nbr = - nbr;
+		nbr = -nbr;
 		i++;
 	}
 	ft_itoa_recursive(nbr, str, len - 1);

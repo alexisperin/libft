@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:16:55 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 18:15:15 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/05 20:47:56 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*trim;
 
-	if(!s1)
+	if (!s1)
 		return (0);
 	if (!set)
 		return (ft_strdup(s1));
