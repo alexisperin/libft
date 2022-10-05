@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 10:53:19 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 10:53:19 by aperin           ###   ########.fr       */
+/*   Created: 2022/10/05 14:30:08 by aperin            #+#    #+#             */
+/*   Updated: 2022/10/05 14:36:16 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,4 @@ char	*ft_itoa(int n)
 	}
 	ft_itoa_recursive(nbr, str, len - 1);
 	return (str);
-}
-#include <stdio.h>
-int main(int ac, char **av)
-{
-	(void) ac;
-	char *str = ft_itoa(ft_atoi(av[1]));
-	printf("%s\n", str);
 }
