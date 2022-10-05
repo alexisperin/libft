@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:16:55 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/04 21:16:55 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/05 14:55:20 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (in_set(s1[end], set))
 		end--;
-	if (start >= end)
+	if (start > end)
 		return (ft_strdup(""));
 	trim = malloc((end - start + 2) * sizeof(char));
 	if (!trim)
