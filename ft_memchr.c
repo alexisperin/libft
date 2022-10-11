@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 10:12:39 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/11 15:43:21 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/11 17:19:30 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	str = (unsigned char *) s;
 	uc = (unsigned char) c;
-	while (str[i] != uc && i < n)
-		i++;
-	if (str[i] == uc && i < n)
+	while (str[i] && i < n)
+	{
+		if (str[i] == uc)
+			return (str + i);
+		i ++;
+	}
+	if (uc == '\0')
 		return (str + i);
 	return (0);
 }
