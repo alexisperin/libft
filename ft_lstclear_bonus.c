@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperin <aperin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:41:35 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/11 15:52:35 by aperin           ###   ########.fr       */
+/*   Created: 2022/10/05 17:06:47 by aperin            #+#    #+#             */
+/*   Updated: 2022/10/12 12:12:12 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	sign;
-	int	nbr;
-	int	i;
+	t_list	*curr;
+	t_list	*tmp;
 
-	sign = 1;
-	nbr = 0;
-	i = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (!lst)
+		return ;
+	curr = *lst;
+	while (curr)
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		tmp = curr->next;
+		ft_lstdelone(curr, del);
+		curr = tmp;
 	}
-	while (ft_isdigit(str[i]))
-	{
-		nbr = (nbr * 10) + str[i] - 48;
-		i++;
-	}
-	return (sign * nbr);
+	*lst = 0;
 }

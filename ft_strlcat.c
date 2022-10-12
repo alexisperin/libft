@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 15:45:07 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/11 14:57:29 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/12 10:34:46 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_size;
 	size_t	i;
 
-	dst_size = ft_strlen(dst);
 	if (size < 1)
 		return (ft_strlen(src));
+	dst_size = ft_strlen(dst);
 	if (size < dst_size)
 		return (size + ft_strlen(src));
 	i = 0;
