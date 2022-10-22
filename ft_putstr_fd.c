@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:09:49 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 15:12:12 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/22 17:19:57 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	int	i;
+	size_t	i;
 
 	if (!str)
 		return ;
 	i = 0;
 	while (str[i])
-	{
-		ft_putchar_fd(str[i], fd);
 		i++;
-	}
+	write(fd, str, i);
 }

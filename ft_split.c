@@ -6,16 +6,16 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:12:31 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/05 18:17:20 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/22 17:22:42 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	size_splits(const char *str, char c)
+static size_t	size_splits(const char *str, char c)
 {
-	int	i;
-	int	size;
+	size_t	i;
+	size_t	size;
 
 	if (!str)
 		return (0);
@@ -35,7 +35,7 @@ static int	size_splits(const char *str, char c)
 
 static char	*get_substring(const char *str, char c)
 {
-	int		len;
+	size_t	len;
 	char	*substr;
 
 	len = 0;
@@ -48,10 +48,13 @@ static char	*get_substring(const char *str, char c)
 	return (substr);
 }
 
-static char	**free_splits(char **splits, int i)
+static char	**free_splits(char **splits, size_t i)
 {
-	while (--i >= 0)
+	while (i)
+	{
+		i--;
 		free(splits[i]);
+	}
 	free(splits);
 	return (0);
 }
@@ -59,8 +62,8 @@ static char	**free_splits(char **splits, int i)
 char	**ft_split(const char *str, char c)
 {
 	char	**splits;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	splits = malloc(size_splits(str, c) * sizeof(char *));
 	if (!str || !splits)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aperin <aperin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:08:56 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/12 12:11:30 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/22 18:04:30 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t			substr_len;
-	char			*substr;
+	size_t	substr_len;
+	char	*substr;
 
 	if (!s)
 		return (0);
-	if (ft_strlen(s) < start + 1)
+	if (!len || ft_strlen(s) <= start)
 		return (ft_strdup(""));
 	substr_len = ft_strlen(s + start);
 	if (substr_len > len)

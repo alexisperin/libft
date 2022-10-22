@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aperin <aperin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:54:38 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/11 16:33:12 by aperin           ###   ########.fr       */
+/*   Updated: 2022/10/22 17:07:36 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	if (!dest && !src)
 		return (0);
-	ptr_dest = (char *) dest;
-	ptr_src = (const char *) src;
+	ptr_dest = dest;
+	ptr_src = src;
 	if (ptr_src < ptr_dest)
 	{
 		while (n)
