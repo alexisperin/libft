@@ -6,7 +6,7 @@
 /*   By: aperin <aperin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:41:35 by aperin            #+#    #+#             */
-/*   Updated: 2022/10/22 16:53:17 by aperin           ###   ########.fr       */
+/*   Updated: 2022/11/02 14:31:11 by aperin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int		sign;
-	int		nbr;
+	long	nbr;
 	size_t	i;
 
 	nbr = 0;
